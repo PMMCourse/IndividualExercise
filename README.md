@@ -14,5 +14,5 @@ Este ejercicio debe hacerse obligatoriamente usando el patrón MVVM que hemos de
 
 Ánimo! Recuerda, es mejor que te pares primero a pensar cuales son las partes diferenciadas de cada uno de los ejercicios y posteriormente realizarlos.
 
-El tiempo estimado del ejercicio es aproximadamente unas 5 horas.
+El tiempo estimado del ejercicio es aproximadamente unas 5 a 10 horas.
 
