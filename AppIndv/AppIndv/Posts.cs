@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppIndv
 {
-    class Posts
+   public class Posts
     {
         public int userId { get; set; }
         public int id { get; set; }
