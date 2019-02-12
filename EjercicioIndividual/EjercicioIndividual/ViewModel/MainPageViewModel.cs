@@ -36,7 +36,6 @@ namespace EjercicioIndividual.ViewModel
         {
             getPostsService = new GetPostsService();
             posts = getPostsService.GetAllPosts();
-            OnPropertyChanged();
             
         }
     }

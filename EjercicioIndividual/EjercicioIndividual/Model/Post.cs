@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,7 +15,7 @@ namespace EjercicioIndividual.Model
                 
             
         }
-
+        [JsonProperty("body")]
         private string description;
         public string Description
         {

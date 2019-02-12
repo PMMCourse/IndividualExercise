@@ -15,13 +15,7 @@ namespace EjercicioIndividual.ViewModel
 
         public PostsViewModel()
         {
-            Posts = new ObservableCollection<Post>();
-            GetPostsService = new GetPostsService();
-            var posts = GetPostsService.GetAllPosts();
-            foreach (var post in posts)
-            {
-                Posts.Add(post);
-            }
+            
         }
     }
 }
