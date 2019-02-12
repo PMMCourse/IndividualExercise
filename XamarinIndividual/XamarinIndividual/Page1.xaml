@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinIndividual.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="userid"
+             FontSize="Large"  
+             HorizontalOptions="Center"  
+             VerticalOptions="Center"/>
+                <Label x:Name="Postid"  
+             FontSize="Large"  
+             HorizontalOptions="Center"  
+             VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView BackgroundColor="Red" HeightRequest="1"></BoxView>
+            <Label x:Name="title" 
+             FontAttributes="Bold"  
+             FontSize="Large"  
+             HorizontalOptions="Start"  
+             VerticalOptions="Center"
+             TextColor="Black"/>
+            <Label x:Name="body"  
+             FontSize="Large"  
+             HorizontalOptions="Center"  
+             VerticalOptions="Center"/>
+            <BoxView BackgroundColor="Red" HeightRequest="1"></BoxView>
+            <StackLayout  Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Entry x:Name="insert" Placeholder="Insert your comment here" VerticalOptions="End"></Entry>
+                <Button Text="COMMENT" Clicked="cliclar" VerticalOptions="End"></Button>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

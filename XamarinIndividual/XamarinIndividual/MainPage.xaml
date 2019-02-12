@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinIndividual"
+             x:Class="XamarinIndividual.MainPage">
+    <StackLayout>
+        <Label Text="My Post" HorizontalTextAlignment="Center"></Label>
+        <SearchBar TextChanged="SearchBar_TextChanged" HorizontalOptions="FillAndExpand"  Placeholder="Search Posts"></SearchBar>
+        <ListView x:Name="Post_List" ItemTapped="MainListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <TextCell Text="{Binding id}" Detail="{Binding title}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>
