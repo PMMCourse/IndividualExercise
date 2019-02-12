@@ -13,7 +13,7 @@
 
             <BoxView BackgroundColor="red" HeightRequest="1" ></BoxView>
             <StackLayout>
-                <Label x:Name="title" FontSize="Large" HorizontalOptions="Center" FontFamily="bold" VerticalOptions="Center"/>
+                <Label x:Name="title" FontSize="Large" Font="Bold,20" HorizontalOptions="Center" FontFamily="bold" VerticalOptions="Center"/>
                 <Label x:Name="body" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center"/>
             </StackLayout>
             <BoxView BackgroundColor="red" HeightRequest="1" ></BoxView>

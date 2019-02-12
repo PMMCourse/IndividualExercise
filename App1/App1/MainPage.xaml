@@ -11,10 +11,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
                             <!--Lo que se mostrara en la lista-->
-                            <Label Text="{Binding userId}" />
-                            <Label Text="{Binding body}" />
+                            <Label Margin="5" Text="{Binding userId}" />
+                            <Label Margin="8" Text="{Binding title}" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
