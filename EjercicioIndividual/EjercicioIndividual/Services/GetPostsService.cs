@@ -22,9 +22,6 @@ namespace EjercicioIndividual.Services
             return posts;
         }
 
-        private async void HttpCall()
-        {
-            
-        }
+     
     }
 }

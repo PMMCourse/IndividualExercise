@@ -16,15 +16,14 @@
 			   VerticalOptions="CenterAndExpand"/>
 		<ListView  ItemsSource="{Binding Posts}"
 				  HorizontalOptions="FillAndExpand"
-				  VerticalOptions="FillAndExpand">
+				  VerticalOptions="StartAndExpand">
 
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="1"/>
-							<Label Text="{Binding Id}" />
-							<Label Text="{Binding Description}" />
+						<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+							<Label Text="{Binding UserId}" HorizontalOptions="FillAndExpand" />
+							<Label Text="{Binding Title}" HorizontalOptions="FillAndExpand" />
 						</StackLayout>
 					</ViewCell>
 				</DataTemplate>

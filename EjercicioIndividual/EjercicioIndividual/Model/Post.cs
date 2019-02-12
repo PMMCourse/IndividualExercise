@@ -15,12 +15,28 @@ namespace EjercicioIndividual.Model
                 
             
         }
+        private int userId;
+        public int UserId
+        {
+            get => userId;
+            set => userId = value;
+
+
+        }
         [JsonProperty("body")]
         private string description;
         public string Description
         {
             get => description;
             set => description = value;
+        }
+
+        private string title;
+        public string Title
+        {
+            get => title;
+            set => title = value;
+            
         }
 
         private List<String> Comments;
