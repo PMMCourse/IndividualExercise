@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EjercicioIndividual"
+             x:Class="EjercicioIndividual.MainPage">
+
+    <StackLayout
+		VerticalOptions="StartAndExpand">
+        <!-- Place new controls here -->
+		<Label Text="{Binding Test}" 
+			   VerticalTextAlignment="Start"
+			   HorizontalOptions="Center"
+			   VerticalOptions="CenterAndExpand" />
+		<Entry Placeholder="Search posts"
+			   HorizontalOptions="FillAndExpand"
+			   VerticalOptions="CenterAndExpand"/>
+		<ListView  ItemsSource="{Binding Posts}"
+				  HorizontalOptions="FillAndExpand"
+				  VerticalOptions="FillAndExpand">
+
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal">
+							<Label Text="1"/>
+							<Label Text="{Binding Id}" />
+							<Label Text="{Binding Description}" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+
+		</ListView>
+	</StackLayout>
+
+</ContentPage>
