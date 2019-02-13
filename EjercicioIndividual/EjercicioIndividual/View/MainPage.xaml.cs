@@ -28,5 +28,11 @@ namespace EjercicioIndividual
             PostsListView.SelectedItem = null;
 
         }
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            (this.BindingContext as MainPageViewModel).ExecuteRefreshList.Execute(null);
+        }
+
     }
 }

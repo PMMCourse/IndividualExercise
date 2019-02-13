@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace EjercicioIndividual.ViewModel
 {
@@ -19,6 +20,17 @@ namespace EjercicioIndividual.ViewModel
                 OnPropertyChanged();
             }
         }
+        private string search;
+        public string Search
+        {
+            get => search;
+            set
+            {
+                search = value;
+                OnPropertyChanged();
+            }
+        }
+        private List<Post> allposts;
         private List<Post> posts;
         private IGetPostsService getPostsService;
         public List<Post> Posts
@@ -31,12 +43,32 @@ namespace EjercicioIndividual.ViewModel
             }
         }
         
-
         public MainPageViewModel()
         {
             getPostsService = new GetPostsService();
-            posts = getPostsService.GetAllPosts();
+            allposts = getPostsService.GetAllPosts();
+            posts = allposts;
+            ExecuteRefreshList = new Command(RefreshList);
             
         }
+
+        private void RefreshList()
+        {
+            if (search == null)
+                return;
+            if (search == string.Empty)
+            {
+                posts = allposts;
+            }
+            else
+            {
+                posts = allposts.Where(x => x.Title.Contains(search)).ToList();
+            }
+            OnPropertyChanged("Posts");
+        }
+
+        public Command ExecuteRefreshList { get; set; }
+
+
     }
 }

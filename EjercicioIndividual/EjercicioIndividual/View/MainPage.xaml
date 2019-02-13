@@ -12,8 +12,10 @@
 			   HorizontalOptions="Center"
 			   VerticalOptions="CenterAndExpand" />
 		<Entry Placeholder="Search posts"
+			   Text="{Binding Search}"
 			   HorizontalOptions="FillAndExpand"
-			   VerticalOptions="CenterAndExpand"/>
+			   VerticalOptions="CenterAndExpand"
+			   TextChanged="Entry_TextChanged"/>
 		<ListView  ItemsSource="{Binding Posts}"
                    x:Name="PostsListView"
 				  HorizontalOptions="FillAndExpand"
@@ -23,7 +25,7 @@
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+						<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
 							<Label Text="{Binding UserId}" HorizontalOptions="Start" />
 							<Label Text="{Binding Title}" HorizontalOptions="StartAndExpand" />
 						</StackLayout>
