@@ -20,6 +20,7 @@ namespace App1
             BindingContext = post;
 		}
 
+        //Mensaje de alerta 
         async private void Button_Clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Thanks for your comment", "", "OK");

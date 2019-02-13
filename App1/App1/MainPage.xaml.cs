@@ -13,17 +13,17 @@ namespace App1
 {
     public class Post
     {
-
         public int userId { get; set; }
         public int id { get; set; }
         public string title { get; set; }
         public string body { get; set; }
-
     }
+
     public partial class MainPage : ContentPage
     {
+        //Url del JSON
         private const String url = "https://jsonplaceholder.typicode.com/posts";
-
+        
         private HttpClient HttpClient = new HttpClient();
         private ObservableCollection<Post> listaPost;
 
@@ -32,6 +32,7 @@ namespace App1
             InitializeComponent();
         }
 
+        //Metodo de apertura la pagina
         protected override async void OnAppearing()
         {
             var content = await HttpClient.GetStringAsync(url);
@@ -41,6 +42,7 @@ namespace App1
             base.OnAppearing();
         }
 
+        //Metodo de busqueda SeachBar
         private void BuscarPost_TextChanged(object sender, TextChangedEventArgs e)
         {
             var palabra = buscarPost.Text;
@@ -48,6 +50,7 @@ namespace App1
             ListaPosts.ItemsSource = result;
         }
 
+        //Metodo navegacion a la pantalla del post elegido
         async private void ListaPosts_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var item = e.Item as Post;

@@ -5,26 +5,25 @@
              x:Class="App1.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
+        
         <Label Text="My posts" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         <SearchBar x:Name="buscarPost" TextChanged="BuscarPost_TextChanged" Placeholder="Search posts" />
-        <ListView x:Name="ListaPosts"  SeparatorVisibility="None" HasUnevenRows="True" ItemTapped="ListaPosts_ItemTapped">
 
+        <ListView x:Name="ListaPosts"  SeparatorVisibility="None" HasUnevenRows="True" ItemTapped="ListaPosts_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
                             <Label Text="{Binding userId}"></Label>
                             <Label Text="{Binding title}" ></Label>
-                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            
         </ListView>
+        
     </StackLayout>
 
 </ContentPage>
