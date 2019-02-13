@@ -15,8 +15,10 @@
 			   HorizontalOptions="FillAndExpand"
 			   VerticalOptions="CenterAndExpand"/>
 		<ListView  ItemsSource="{Binding Posts}"
+                   x:Name="PostsListView"
 				  HorizontalOptions="FillAndExpand"
-				  VerticalOptions="StartAndExpand">
+				  VerticalOptions="StartAndExpand"
+                   ItemSelected="ListView_ItemSelected">
 
 			<ListView.ItemTemplate>
 				<DataTemplate>
