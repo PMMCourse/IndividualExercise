@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IndividualXF"
+             x:Class="IndividualXF.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+            <Label Text="My Post" HorizontalOptions="Start"/>
+        </StackLayout>
+        
+        <SearchBar x:Name="sbPost" TextChanged="SbPost_TextChanged">
+            
+        </SearchBar>
+        <ListView x:Name="lbPost" ItemSelected="LbPost_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding UserId}" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Title}" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+
+</ContentPage>

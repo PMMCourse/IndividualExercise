@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IndividualXF.ViewPost">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <Label x:Name="Id" HorizontalOptions="Start"/>
+            </StackLayout>
+            
+            <BoxView BackgroundColor="red" HeightRequest="1"></BoxView>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                <Label x:Name="Title" HorizontalOptions="Start" FontSize="Large"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                <Label x:Name="Body" HorizontalOptions="Start"/>
+            </StackLayout>
+            
+            <BoxView BackgroundColor="red" HeightRequest="1"></BoxView>
+            
+            <StackLayout  Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Entry x:Name="tbComment" Placeholder="Inserte un comentario" VerticalOptions="End"></Entry>
+                <Button Text="Enviar" VerticalOptions="End" Clicked="btComment"></Button>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
