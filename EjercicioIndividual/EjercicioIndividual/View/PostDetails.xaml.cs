@@ -18,5 +18,10 @@ namespace EjercicioIndividual.View
             InitializeComponent();
             BindingContext = postdetailsViewModel;
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("", "Thank you for commenting", "Ok");
+        }
     }
 }

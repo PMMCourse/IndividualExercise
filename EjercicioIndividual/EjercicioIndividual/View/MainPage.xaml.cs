@@ -24,7 +24,7 @@ namespace EjercicioIndividual
             if (post == null)
                 return;
             await Navigation.PushAsync(new PostDetails(new PostDetailsViewModel(post)));
-
+            
             PostsListView.SelectedItem = null;
 
         }
