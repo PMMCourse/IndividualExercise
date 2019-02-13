@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.PageContenido">
+    
+    <ContentPage.Content >
+        <StackLayout Orientation="Vertical">
+            
+            <StackLayout Orientation="Horizontal" Padding="15,10">
+                <Label Text="User Id:"
+                    HorizontalOptions="EndAndExpand" />
+                <Label Text="{Binding userId}"
+                    HorizontalOptions="Start" />
+                <Label Text="Post Id:"
+                    HorizontalOptions="Start" />
+                <Label Text="{Binding id}"
+                    HorizontalOptions="StartAndExpand" />
+            </StackLayout>
+            
+            <BoxView HeightRequest="1" Color="Red" />
+            
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Padding="5,10">
+                <Label Text="{Binding title}" HorizontalOptions="StartAndExpand" FontSize="22" FontAttributes="Bold"/>
+                <Label Text="{Binding body}" HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            
+            <BoxView HeightRequest="1" Color="Red"/>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Entry Placeholder="Insert your comment here" ></Entry>
+                <Button Text="COMMENT" Clicked="Button_Clicked"></Button>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
