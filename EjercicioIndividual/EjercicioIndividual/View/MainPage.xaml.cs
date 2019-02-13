@@ -34,5 +34,10 @@ namespace EjercicioIndividual
             (this.BindingContext as MainPageViewModel).ExecuteRefreshList.Execute(null);
         }
 
+        protected override void OnAppearing()
+        {
+            (this.BindingContext as MainPageViewModel).ExecuteGetPosts.Execute(null);
+            base.OnAppearing();
+        }
     }
 }

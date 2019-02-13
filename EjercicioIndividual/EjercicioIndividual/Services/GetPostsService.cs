@@ -12,11 +12,11 @@ namespace EjercicioIndividual.Services
     class GetPostsService : IGetPostsService
     {
         private string json;
-        public List<Post> GetAllPosts()
+        public async Task<List<Post>> GetAllPosts()
         {
 
             HttpClient httpClient = new HttpClient();
-            json = httpClient.GetStringAsync("https://jsonplaceholder.typicode.com/posts").Result;
+            json = await httpClient.GetStringAsync("https://jsonplaceholder.typicode.com/posts");
             List<Post> posts = JsonConvert.DeserializeObject<List<Post>>(json);
 
             return posts;

@@ -46,12 +46,22 @@ namespace EjercicioIndividual.ViewModel
         public MainPageViewModel()
         {
             getPostsService = new GetPostsService();
-            allposts = getPostsService.GetAllPosts();
-            posts = allposts;
+            
             ExecuteRefreshList = new Command(RefreshList);
+            ExecuteGetPosts = new Command(GetPosts);
             
         }
 
+        private async void  GetPosts(object obj)
+        {
+            allposts = await getPostsService.GetAllPosts();
+            posts = allposts;
+            OnPropertyChanged("Posts");
+        }
+
+        public Command ExecuteGetPosts;
+
+        
         private void RefreshList()
         {
             if (search == null)

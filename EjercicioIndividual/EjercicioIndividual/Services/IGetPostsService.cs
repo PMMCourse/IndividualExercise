@@ -8,6 +8,6 @@ namespace EjercicioIndividual.Services
 {
     interface IGetPostsService
     {
-        List<Post> GetAllPosts();
+        Task<List<Post>> GetAllPosts();
     }
 }
