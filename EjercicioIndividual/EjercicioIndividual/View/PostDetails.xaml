@@ -17,7 +17,7 @@
                 <Label Text="{Binding Description}" VerticalOptions="StartAndExpand"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand">
-                <Entry HorizontalOptions="Start" Placeholder="Insert your comment here" />
+				<Entry HorizontalOptions="Start" Placeholder="Insert your comment here" Text="{Binding NewComment}" />
                 <Button Text="COMMENT" Clicked="Button_Clicked"/>
             </StackLayout>
         </StackLayout>

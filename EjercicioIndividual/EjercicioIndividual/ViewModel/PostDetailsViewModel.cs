@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace EjercicioIndividual.ViewModel
 {
-    public class PostDetailsViewModel
+    public class PostDetailsViewModel : BindableObject
     {
         private int id;
         public int Id
@@ -19,6 +19,17 @@ namespace EjercicioIndividual.ViewModel
             set => id = value;
 
         }
+
+        private string newComment;
+        public string NewComment
+        {
+            get => newComment;
+            set
+            {
+                newComment = value;
+                OnPropertyChanged();
+            }
+        }
         private int userId;
         public int UserId{ get=>userId; set=>userId=value; }
         private string title;
@@ -26,8 +37,7 @@ namespace EjercicioIndividual.ViewModel
         private string description;
         public string Description { get=>description; set=>description=value; }
         private List<string> comments;
-        private PostDetails Context;
-        //private INavigation navigation;
+       
 
         public ICommand PerformAddComment;
         public PostDetailsViewModel(Post post)
@@ -38,13 +48,13 @@ namespace EjercicioIndividual.ViewModel
             description = post.Description;
             comments = post.Comments;
             PerformAddComment = new Command(AddComment);
-            //this.navigation = navigation;
         }
         
         public void AddComment()
         {
-            
-            //navigation.NavigationStack.FirstOrDefault<PostDetails>().DisplayAlert("","Thank you for commenting ","Ok");
+            if (newComment == null || newComment == string.Empty)
+                return;
+            comments.Add(newComment);
         }
     }
 }

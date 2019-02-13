@@ -22,6 +22,7 @@ namespace EjercicioIndividual.View
         private void Button_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("", "Thank you for commenting", "Ok");
+            (this.BindingContext as PostDetailsViewModel).PerformAddComment.Execute(null);
         }
     }
 }

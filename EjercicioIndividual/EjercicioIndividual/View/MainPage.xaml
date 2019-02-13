@@ -26,8 +26,8 @@
 				<DataTemplate>
 					<ViewCell>
 						<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
-							<Label Text="{Binding UserId}" HorizontalOptions="Start" />
-							<Label Text="{Binding Title}" HorizontalOptions="StartAndExpand" />
+							<Label Text="{Binding UserId}" HorizontalOptions="Start" Margin="5" />
+							<Label Text="{Binding Title}" HorizontalOptions="StartAndExpand" Margin="5" />
 						</StackLayout>
 					</ViewCell>
 				</DataTemplate>
