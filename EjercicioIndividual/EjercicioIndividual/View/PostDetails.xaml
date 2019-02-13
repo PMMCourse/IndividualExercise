@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioIndividual.View.PostDetails">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="{Binding UserId, StringFormat='{}User Id: {0}'}"
+                VerticalOptions="Start" FontAttributes="Bold"  />
+                <Label Text="{Binding Id, StringFormat='{}Post Id: {0}'}"
+                VerticalOptions="Start" FontAttributes="Italic" TextColor="Gray" />
+            </StackLayout>
+			<Frame BorderColor="Red">
+				<StackLayout Orientation="Vertical"
+                     HorizontalOptions="StartAndExpand"
+                     VerticalOptions="Start">
+					<Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Large"/>
+					<Label Text="{Binding Description}" VerticalOptions="StartAndExpand"/>
+				</StackLayout>
+			</Frame>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand">
+				<Entry HorizontalOptions="Start" Placeholder="Insert your comment here" Text="{Binding NewComment}" />
+                <Button Text="COMMENT" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
