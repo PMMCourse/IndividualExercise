@@ -39,7 +39,12 @@ namespace EjercicioIndividual.Model
             
         }
 
-        private List<String> Comments;
+        private List<string> comments;
+        public List<string> Comments
+        {
+            get => comments;
+            set => comments = value;
+        }
 
         public Post(int id, string description)
         {

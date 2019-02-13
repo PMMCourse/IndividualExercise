@@ -23,7 +23,7 @@ namespace EjercicioIndividual
             var post = e.SelectedItem as Post;
             if (post == null)
                 return;
-            await Navigation.PushAsync(new PostDetails());
+            await Navigation.PushAsync(new PostDetails(new PostDetailsViewModel(post)));
 
             PostsListView.SelectedItem = null;
 

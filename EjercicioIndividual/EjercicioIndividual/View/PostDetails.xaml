@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EjercicioIndividual.View.PostDetails">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="{Binding UserId, StringFormat='{}User Id: {0}'}"
+                VerticalOptions="Start" FontAttributes="Bold"  />
+                <Label Text="{Binding Id, StringFormat='{}Post Id: {0}'}"
+                VerticalOptions="Start" FontAttributes="Italic" TextColor="Gray" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                     HorizontalOptions="StartAndExpand"
+                     VerticalOptions="Start">
+                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Large"/>
+                <Label Text="{Binding Description}" VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
