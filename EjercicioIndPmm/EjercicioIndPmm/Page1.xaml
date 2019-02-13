@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioIndPmm.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Label x:Name="userId" FontSize="Small" FontAttributes="Bold"/>
+
+                <Label x:Name="id"  FontSize="Small"/>
+
+            </StackLayout>
+
+            <BoxView Color="Red" HeightRequest="1"></BoxView>
+
+            <StackLayout>
+
+                <Label x:Name="titulo" FontAttributes="Bold"></Label>
+
+                <Label x:Name="contenido" LineBreakMode="WordWrap"></Label>
+            </StackLayout>
+
+            <BoxView Color="Red" HeightRequest="1"></BoxView>
+
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" >
+                <Entry Placeholder="place your comment" VerticalOptions="End" ></Entry>
+
+                <Button x:Name="comentario" Text="COMMENT" Clicked="mensaje" VerticalOptions="End " ></Button>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
