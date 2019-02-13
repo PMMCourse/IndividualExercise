@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppIndividual.DetallePost">
+
+    
+    <ContentPage.Content>
+        
+        <StackLayout Spacing="20">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0" Spacing="40">
+                <Label x:Name="userId" FontSize="16" FontFamily="Tahoma"/>
+                <Label x:Name="id" FontSize="16" FontFamily="Tahoma"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center">
+                <Label x:Name="title" Margin="20,0,20,0" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma" TextColor="Crimson"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center">
+                <Label x:Name="body" Margin="20,0,20,0" FontSize="16" FontFamily="Tahoma"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,100,0,0">
+                <Entry x:Name="comentario" Placeholder="Inserta tu comentario" TextChanged="Comentario_TextChanged"/>
+                <Button IsEnabled="False" Text="Comentar" x:Name="btnAddComentario" Clicked="BtnAddComentario_Clicked"/>
+            </StackLayout>
+            
+
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+        
+</ContentPage>
