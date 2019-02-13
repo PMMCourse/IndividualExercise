@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppIndividual"
+             x:Class="AppIndividual.MainPage">
+    
+    <StackLayout>
+        <!-- Pantalla de carga -->
+        <StackLayout x:Name="stackActivityIndicator" Orientation="Vertical" VerticalOptions="CenterAndExpand" Spacing="10">
+            <ActivityIndicator x:Name="activityIndicator" Color="Crimson" IsRunning="True"/>
+            <Label Text="Retrieving data..." HorizontalTextAlignment="Center" FontSize="20"/>
+        </StackLayout>
+
+
+        <Label x:Name="titulo" IsVisible="False" Text="MIS POSTS" HorizontalTextAlignment="Center" TextColor="Crimson" FontAttributes="Bold" FontSize="18" FontFamily="Tahoma" Margin="0,10,0,0"/>
+
+
+        <!-- Barra de búsqueda -->
+        <SearchBar IsVisible="False" x:Name="searchbarPosts" Margin="0,10,10,10" Placeholder="Buscar post" TextChanged="SearchbarPosts_TextChanged"/>
+        
+        
+        <!-- Listado de posts -->
+        <ListView IsVisible="False" x:Name="listviewPosts" ItemTapped="ListviewPosts_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                <Label Text="{Binding userId}" Margin="10,0,0,0" TextColor="Crimson" FontAttributes="Bold" FontSize="16" FontFamily="Tahoma"/>
+                                <Label Text="{Binding title}" Margin="10,0,10,0" FontSize="16" FontFamily="Tahoma"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
