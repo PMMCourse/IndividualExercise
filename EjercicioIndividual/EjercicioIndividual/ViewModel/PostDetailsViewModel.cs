@@ -48,6 +48,7 @@ namespace EjercicioIndividual.ViewModel
             description = post.Description;
             comments = post.Comments;
             PerformAddComment = new Command(AddComment);
+            comments = new List<string>();
         }
         
         public void AddComment()
@@ -55,6 +56,7 @@ namespace EjercicioIndividual.ViewModel
             if (newComment == null || newComment == string.Empty)
                 return;
             comments.Add(newComment);
+            NewComment = string.Empty;
         }
     }
 }
