@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IactivityPana1.Android", "IactivityPana1\IactivityPana1.Android\IactivityPana1.Android.csproj", "{68DA116D-3660-412D-B9CE-7333CEA026F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IactivityPana1", "IactivityPana1\IactivityPana1\IactivityPana1.csproj", "{07B71459-1FDF-4523-BF13-3AE52E157C28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IactivityPana1", "IactivityPana1\IactivityPana1\IactivityPana1.csproj", "{07B71459-1FDF-4523-BF13-3AE52E157C28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
